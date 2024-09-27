@@ -3,22 +3,19 @@ services:
   express-app:
     image: express-demo
     container_name: express-container
-    build:
-      context: ./ExpressApp 
-    networks:
-      - custom-app-network
+    build: ./ExpressApp 
     ports:
-      - "5000:5000"
+      - "5000:5000"   
+
 
   react-app:
     image: reactapp-demo
     container_name: react-container
-    build:
-      context: ./reactapp 
-    networks:
-      - custom-app-network
+    build: ./reactapp 
     ports:
       - "3000:3000"
+
+
 
 networks:
   custom-app-network:

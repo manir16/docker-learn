@@ -1,14 +1,7 @@
 const express = require("express");
-const cors = require("cors");
 
 const app = express();
 const PORT = 6006;
-
-var corsOptions = {
-  origin: "http://localhost:3000",
-};
-
-app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.send("Hello from Express!");
